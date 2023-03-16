@@ -1,0 +1,72 @@
+#active-game{
+    text-align: center;
+    margin: 2rem 0 5rem 0;
+    display: none;
+}
+
+#start-game-error {
+    font-size: 1.5rem;
+    display: none;
+    background-color: rgb(234, 28, 28);
+    color: white;
+    border-radius: 4px;
+    width: 25rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    transition: all 0.25s ease-out;
+
+}
+
+#game-over{
+    width: 90%;
+    max-width: 40rem;
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    display: none;
+}
+
+#game-over h2{
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+#active-player-name{
+    font-weight: bold;
+    color: var(--symbol-color);
+}
+
+#game-board{
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 6rem); /*6rem 6rem 6rem*/
+    grid-template-rows: repeat(3, 6rem); /*6rem 6rem 6rem*/
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#game-board li{
+    background-color: var(--game-board-color);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#game-board li:hover{
+    background-color: var(--main-color);
+}
+
+#game-board li.disabled{
+    background-color: var(--main-color);
+    color: white;
+    cursor: default;
+}
